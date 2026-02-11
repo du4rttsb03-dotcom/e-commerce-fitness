@@ -1,0 +1,90 @@
+/* --- RESPONSIVIDADE (Onde a mágica acontece) --- */
+
+@media (max-width: 768px) {
+    /* Ajustes no Título Hero */
+    .title {
+        font-size: 60px; /* Diminuir senão explode a tela do celular */
+    }
+
+    .hero {
+        padding: 60px 20px;
+        font-size: 20px;
+    }
+
+    /* Ajuste da Navegação */
+    nav {
+        flex-direction: column; /* Empilha logo e menu */
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    /* Ajuste do Grid de Produtos */
+    .grid-products {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .product-image-container {
+        width: 100%; /* No mobile, aproveitamos o espaço */
+    }
+
+    .card-name {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 45px;
+    }
+
+    .premium p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 20px; /* Mais espaço nas laterais no mobile */
+    }
+    
+    .footer-content .tagline {
+        font-size: 12px; /* Diminuir um pouco para não quebrar linha */
+    }
+}
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: 1fr; /* Empilha os itens no celular */
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .tech-item h3 {
+        font-size: 1.2rem;
+    }
+    #tech{
+        max-width: 200px;
+        height: 50px;
+    }
+}
+@media (max-width: 500px) {
+    /* ... outros estilos ... */
+
+    .grid-products {
+        display: grid;
+        /* Força a criação de 2 colunas iguais */
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px; /* Reduzi um pouco o espaço para sobrar mais para a imagem */
+        padding: 0 10px;
+    }
+
+    /* Ajuste para as imagens não ficarem espremidas */
+    .product-image-container {
+        width: 10%;
+        height: auto;
+    }
+}

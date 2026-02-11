@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'ThunderBlack';
+    src: url('Thunder-BlackLC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    scroll-behavior: smooth;
+}
+#logo {
+    display: flex;
+    height: 20px;
+    order: -1;
+}
+
+.title {
+    font-family: ThunderBlack;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    font-size: 100PX;
+}
+
+.head {
+    padding: 20px 5%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.hero p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.icon {
+    height: 25px;
+
+    transition: 0.5s ease;
+}
+
+.icon:hover {
+    filter: brightness(0.6);
+    opacity: 0.7;
+}
+
+#promo {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; /* Isso mantém a proporção, cortando as sobras */
+    display: block;
+    transition: transform 3.0s ease;
+}
+
+/* No mobile, talvez você queira que a altura seja diferente para aparecer mais a foto */
+@media (max-width: 768px) {
+    #promo {
+        max-height: 350px; /* Ajuste a altura para o celular como preferir */
+    }
+}
+#promo:hover{
+   transform: scale(1.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Empurra o logo para a esquerda e o menu para a direita */
+    align-items: center;
+    /* Alinha os dois verticalmente ao centro */
+}
+
+nav ul {
+    color: #000;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+body {
+    font-family: sans-serif;
+    /* Depois escolhemos uma fonte de gente rica */
+    background-color: #000;
+    /* Preto, estilo Berzerk */
+    color: #fff;
+    /* Texto branco para contrastar */
+}
+
+a {
+    text-decoration: none;
+    /* Tira o sublinhado azul de iniciante */
+    color: inherit;
+    transition: 0.5s ease;
+}
+
+a:hover {
+    color: #9d9d9d;
+}
+
+.btn {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    margin-top: 7px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.premium {
+    background-color: #111;
+    /* Um cinza quase preto para diferenciar do fundo */
+    padding: 10px 10%;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.premium p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    /* Dá mais espaço entre as linhas, facilitando a leitura */
+    max-width: 800px;
+    margin: 0 auto;
+    /* Centraliza o bloco de texto */
+}
+
+.products {
+    padding: 3%;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.grid-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Cria colunas automáticas */
+    gap: px;
+    /* Dá um espaço decente entre os produtos */
+    margin-top: 10px;
+}
+
+/* Container das imagens */
+.product-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* Estilo para as duas imagens */
+.product-image-container img {
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    transition: opacity 0.5s ease;
+    /* Transição suave de meio segundo */
+}
+
+/* A imagem que aparece no hover fica "por cima" e escondida */
+.img-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    /* Começa invisível */
+}
+
+/* Quando passar o mouse no CONTAINER, a frente some e as costas aparecem */
+.product-image-container:hover .img-front {
+    opacity: 0;
+}
+
+.product-image-container:hover .img-back {
+    opacity: 1;
+}
+
+.btn-sale {
+    background-color: white;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: 0.5s ease;
+}
+
+.btn-sale:hover {
+    background: transparent;
+    color: #fff;
+}
+.card-name{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+footer {
+    background-color: #000; /* Mantém o preto total */
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #1a1a1a; /* Linha sutil para separar do conteúdo */
+    margin-top: 50px;
+    font-family: "Poppins", sans-serif; /* Usando a fonte que você já importou */
+}
+
+.footer-content p {
+    color: #666; /* Cinza para não roubar a cena dos produtos */
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.footer-content .tagline {
+    color: #fff; /* Branco para a frase de efeito */
+    font-weight: 700;
+    font-size: 14px;
+}
+/* Estilização da Página de Tecnologia */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.tech-item h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    border-left: 4px solid #fff;
+    padding-left: 15px;
+}
+
+.tech-item p {
+    color: #9d9d9d;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+#tech{
+    height: 500px;
+    /* Ocupa toda a largura disponível */
+   
+    /* Define um limite máximo de altura para não virar um outdoor */
+    object-fit: cover;
+    /* Corta a imagem inteligentemente para preencher o espaço sem distorcer */
+    display: flex;
+margin: 0 auto;
+}
+#poster2{
+    display: block;
+    width: 1000px;
+}
