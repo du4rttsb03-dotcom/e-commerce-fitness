@@ -1,9 +1,9 @@
-/* --- RESPONSIVIDADE (Onde a mágica acontece) --- */
+
 
 @media (max-width: 768px) {
-    /* Ajustes no Título Hero */
+   
     .title {
-        font-size: 60px; /* Diminuir senão explode a tela do celular */
+        font-size: 60px; 
     }
 
     .hero {
@@ -11,10 +11,11 @@
         font-size: 20px;
     }
 
-    /* Ajuste da Navegação */
     nav {
-        flex-direction: column; /* Empilha logo e menu */
+        grid-template-columns: 1fr;
+        flex-direction: column; 
         gap: 15px;
+        display: flex;
     }
 
     nav ul {
@@ -22,7 +23,7 @@
         font-size: 14px;
     }
 
-    /* Ajuste do Grid de Produtos */
+    
     .grid-products {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
         gap: 15px;
@@ -30,7 +31,7 @@
     }
 
     .product-image-container {
-        width: 100%; /* No mobile, aproveitamos o espaço */
+        width: 100%; 
     }
 
     .card-name {
@@ -49,16 +50,16 @@
 }
 @media (max-width: 768px) {
     footer {
-        padding: 30px 20px; /* Mais espaço nas laterais no mobile */
+        padding: 30px 20px; 
     }
     
     .footer-content .tagline {
-        font-size: 12px; /* Diminuir um pouco para não quebrar linha */
+        font-size: 12px; 
     }
 }
 @media (max-width: 768px) {
     .tech-grid {
-        grid-template-columns: 1fr; /* Empilha os itens no celular */
+        grid-template-columns: 1fr; 
         gap: 30px;
         padding: 0 20px;
     }
@@ -72,17 +73,19 @@
     }
 }
 @media (max-width: 500px) {
-    /* ... outros estilos ... */
+   
 
     .grid-products {
         display: grid;
-        /* Força a criação de 2 colunas iguais */
+       
         grid-template-columns: 1fr 1fr; 
-        gap: 10px; /* Reduzi um pouco o espaço para sobrar mais para a imagem */
-        padding: 0 10px;
+        gap: 10px; 
+        padding: 0 4px;
+        justify-content: center;
+        
     }
 
-    /* Ajuste para as imagens não ficarem espremidas */
+   
     .product-image-container {
         width: 10%;
         height: auto;
